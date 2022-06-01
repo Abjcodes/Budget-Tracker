@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 export default function useLocalStorage( key, defaultValue) {
-    const [value, setvalue] = useState(() => {
+    const [value, setValue] = useState(() => {
         const jsonValue = localStorage.getItem(key)
         //To check if there is an existing object
         if(jsonValue != null){
@@ -19,5 +19,5 @@ export default function useLocalStorage( key, defaultValue) {
     useEffect(() => {
         localStorage.setItem(key, JSON.stringify(value))
     }, [key, value])
-    return [value, setvalue]
+    return [value, setValue]
 }
