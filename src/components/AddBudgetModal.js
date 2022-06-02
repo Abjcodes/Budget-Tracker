@@ -19,7 +19,7 @@ export default function AddBudgetModal({show, handleClose}) {
     }
 
   return (
-      //Creating a modal
+    //Creating a modal
     <Modal show = {show} onHide = {handleClose}>
         <Form onSubmit={handleSubmit}>
             <Modal.Header closeButton>

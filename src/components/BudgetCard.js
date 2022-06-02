@@ -1,7 +1,7 @@
 import { Button, Card, ProgressBar, Stack } from "react-bootstrap";
 import { currencyFormatter } from "../utils";
 
-export default function BudgetCard({name, max, amount, grey}) {
+export default function BudgetCard({name, max, amount, grey, onAddExpenseClick }) {
 
     // For setting the background color of the cards 
     const classNames = []
@@ -28,7 +28,7 @@ export default function BudgetCard({name, max, amount, grey}) {
                 max = {max}
                 now = {amount}/>
                 <Stack direction="horizontal" gap = "2" className="mt-4">
-                <Button variant = "success" className="ms-auto">Add Expense</Button>
+                <Button variant = "success" className="ms-auto" onClick={onAddExpenseClick}>Add Expense</Button>
                 <Button variant = "outline-primary">View Expenses</Button>
                 </Stack>
             </Card.Body>
